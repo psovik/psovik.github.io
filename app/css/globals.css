@@ -1,0 +1,122 @@
+:root {
+  /* Colors */
+  --c-B400: #0052CC;
+  --c-B300: #0065FF;
+  --c-B50: #e1edff;
+  --c-R300: #FF5630;
+  --c-Y300: #FFAB00;
+  --c-G300: #36B37E;
+  --c-T300: #00B8D9;
+  --c-P300: #6554C0;
+
+  --c-N900: #091E42;
+  --c-N800: #172B4D;
+  --c-N400: #505F79;
+  --c-N200: #6B778C;
+  --c-N50: #C1C7D0;
+  --c-N0: #FFFFFF;
+
+  /* Color variables */
+  --c-primary-main: var(--c-B400);
+  --c-primary-neutral: var(--c-N800);
+  --c-primary-light: var(--c-N0);
+
+  --c-text-primary: var(--c-N800);
+  --c-hover-primary: var(--c-B50);
+
+  --c-secondary-R: var(--c-R300);
+  --c-secondary-Y: var(--c-Y300);
+  --c-secondary-G: var(--c-G300);
+  --c-secondary-T: var(--c-T300);
+  --c-secondary-P: var(--c-P300);
+
+  --c-semantic-positive: var(--c-G300);
+  --c-semantic-negative: var(--c-R300);
+  --c-semantic-warning: var(--c-Y300);
+  --c-semantic-info: var(--c-B300);
+
+
+  color: var(--c-text-primary);
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  
+  font-family: "Poppins", sans-serif;
+  background-color: var(--c-primary-light);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
